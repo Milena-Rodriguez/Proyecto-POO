@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="433.0" prefWidth="767.0" spacing="20.0" stylesheets="@css/estilos.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.proyectopoojar.ListaDuenio">
+   <children>
+      <Label id="titulo" prefHeight="53.0" prefWidth="396.0" text="Lista de Dueños de mascotas">
+         <font>
+            <Font name="Yu Gothic Medium" size="26.0" />
+         </font></Label>
+      <HBox prefHeight="238.0" prefWidth="742.0">
+         <children>
+            <ScrollPane prefHeight="238.0" prefWidth="726.0">
+               <content>
+                  <TableView fx:id="tvDuenio" onSort="#llenarTabletView" prefWidth="711.0">
+                    <columns>
+                      <TableColumn id="label" fx:id="colCedula" prefWidth="90.0" text="Cédula" />
+                      <TableColumn id="label" fx:id="colNombre" prefWidth="90.0" text="Nombres" />
+                        <TableColumn id="label" fx:id="colApellido" prefWidth="90.0" text="Apellidos" />
+                        <TableColumn id="label" fx:id="colDireccion" prefWidth="90.0" text="Dirección" />
+                        <TableColumn id="label" fx:id="colTelefono" prefWidth="90.0" text="Teléfono" />
+                        <TableColumn id="label" fx:id="colCiudad" prefWidth="90.0" text="Ciudad" />
+                        <TableColumn id="label" fx:id="colEmail" prefWidth="90.0" text="Email" />
+                        <TableColumn id="label" fx:id="colOpc" prefWidth="90.0" text="Opciones" />
+                        <TableColumn id="label" prefWidth="90.0" text="Column X" />
+                    </columns>
+                  </TableView>
+               </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="300.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button id="button" fx:id="switchToSecondary" alignment="CENTER" contentDisplay="CENTER" onAction="#switchToSecondary" text="Agregar Dueño" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Button id="button" fx:id="switchToPrimary" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToPrimary" text="Volver al menú principal" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
