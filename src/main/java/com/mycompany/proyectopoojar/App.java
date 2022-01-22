@@ -16,7 +16,7 @@ public class App extends Application {
     private static Scene scene;
     public static String pathCiudad = "com/mycompany/files/ciudades.csv";
     public static String pathDuenio="com/mycompany/files/duenosP5.csv";
-    public static String pathAus="/ficheros/Auspiciantes.dat";
+    public static String pathAus="com/mycompany/files/Auspiciantes.dat";
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -36,6 +36,10 @@ public class App extends Application {
 
     public static void main(String[] args) {
         launch();
+    }
+    //metodo para cambiar el contenido de la escena
+    static void changeRoot(Parent rootNode) {
+        scene.setRoot(rootNode);
     }
 
 }

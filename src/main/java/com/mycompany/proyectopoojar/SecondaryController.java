@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 
 public class SecondaryController {
     
@@ -49,6 +50,11 @@ public class SecondaryController {
                 a.show();
            }
     }
+    @FXML
+    private void cerrarVentana() {
+        Stage stage = (Stage) txtfield0.getScene().getWindow();
+        stage.close();
+    }
     
     private void llenarComboBox() {
         List<String> listaCiu = new ArrayList<>();
@@ -65,9 +71,10 @@ public class SecondaryController {
         .collect(Collectors.toList());*/
         cc.getItems().addAll(listaCiu);
        } 
-    int partida = 32;
+    
     private void GuardarDuenio(){
         if(guardar.isPressed()){
+            //se guardan los datos ingresados en la ventana
             String txt0 = txtfield0.getText();
             String txt1 = txtfield1.getText();
             String txt2 = txtfield2.getText();
@@ -75,13 +82,13 @@ public class SecondaryController {
             String txt4 = txtfield4.getText();
             String txt5 = txtfield5.getText();
             String ciudad = cc.getValue();
-            //Duenio d = new Duenio(txt0,txt1,txt2,txt3,txt4,ciudad,txt5);
+            Ciudad cci = new Ciudad(ciudad);
+            Duenio d = new Duenio(txt0,txt1,txt2,txt3,txt4,cci,txt5);
             if (!(txt0.isEmpty()) &&!(txt1.isEmpty()) &&!(txt2.isEmpty()) &&!(txt3.isEmpty()) &&!(txt4.isEmpty()) &&!(txt5.isEmpty()) && !(ciudad.isEmpty()) ){
             try {
             FileWriter writer = new FileWriter(App.pathDuenio, true);
             BufferedWriter bufferedWriter = new BufferedWriter(writer);
-            partida++;
-            bufferedWriter.write(partida+","+txt0+","+txt1+","+txt2+","+txt3+","+txt4+","+ciudad+","+txt5+"\n");
+            bufferedWriter.write(d.toString()+"\n");
             bufferedWriter.close();
         } catch (IOException e) {
             e.printStackTrace();            
@@ -89,8 +96,7 @@ public class SecondaryController {
                     
         }else{
             Alert a2=new Alert(Alert.AlertType.WARNING,"No dejar campos vacíos.");
-           a2.show();
-    }
+           a2.show();}
         }
     }
     

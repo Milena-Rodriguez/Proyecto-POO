@@ -80,17 +80,17 @@ public class CrearAuspiantes {
             ArrayList<Ciudad> ciudades = Ciudad.cargarCuiudades(App.pathCiudad);
                 for (Ciudad ccc : ciudades){
                     if(ccc.getNombre().equals(ciudad)){
-                        Ciudad ciu = ccc;
+                        Ciudad ciu = new Ciudad(ciudad); ;
                         //crear objeto y agregar a la lista
                        Auspiciante a = new Auspiciante(txt0,txt1,txt2,ciu,txt3,txt4);
-                       fos = new FileOutputStream("/ficheros/Auspiciantes.dat");                                                 
+                       fos = new FileOutputStream(App.pathAus);                                                 
                        salida = new ObjectOutputStream(fos);
                        salida.writeObject(a.toString());
                        }}
             } catch (FileNotFoundException e) {
-                 e.getStackTrace();} 
+                 e.printStackTrace();} 
             catch (IOException e) {
-            e.getStackTrace(); 
+            e.printStackTrace(); 
             } finally {
             try {
                 if(fos!=null){
@@ -100,7 +100,7 @@ public class CrearAuspiantes {
                    salida.close();
                 }
             } catch (IOException e) {
-                     System.out.println("3"+e.getMessage());
+                     e.printStackTrace();
             }}
         }else{
             Alert a2=new Alert(Alert.AlertType.WARNING,"No dejar campos vacíos.");
