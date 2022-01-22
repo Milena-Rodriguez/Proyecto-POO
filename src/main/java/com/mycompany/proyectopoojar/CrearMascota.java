@@ -65,7 +65,7 @@ public class CrearMascota {
     }
     
    public void llenarCombo(){
-       for(com.mycompany.modelo.Duenio d: com.mycompany.modelo.Duenio.cargarDuenios("src/main/java/com/mycompany/files/duenosP5.csv")){
+       for(com.mycompany.modelo.Duenio d: com.mycompany.modelo.Duenio.cargarDuenios(App.pathCiudad)){
                cM.getItems().add(d);
         }
    }
@@ -79,8 +79,7 @@ public class CrearMascota {
    }
    
    public LocalDate Date(){
-       LocalDate i = fecha.getValue();
-       return i;
+       return fecha.getValue();
     }
    
    public DirigidoA radioButtons(){
@@ -124,7 +123,7 @@ public class CrearMascota {
            mascota.setDuenio(cM.getValue());
            
            try {
-            FileWriter writer = new FileWriter("src\\main\\java\\com\\mycompany\\files\\mascotas.csv", true);
+            FileWriter writer = new FileWriter(App.pathMascotas, true);
             BufferedWriter bufferedWriter = new BufferedWriter(writer);
  
             bufferedWriter.write(mascota.generarCodigo()+";"+mascota.getNombre()+";"+mascota.getPerroOGato()+";"+mascota.getRaza()+";"+mascota.getFecha()+";"+mascota.getFoto()+";"+cM.getValue().getCedula()+"\n");
