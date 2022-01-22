@@ -51,7 +51,7 @@ public class AgregarCiudad {
    }
      public void llenarCombo(){
          try {
-            FileReader reader = new FileReader("src/main/java/com/mycompany/files/ciudades.csv");
+            FileReader reader = new FileReader(App.pathCiudad);
             BufferedReader bufferedReader = new BufferedReader(reader);
             String line;
             while ((line = bufferedReader.readLine()) != null) {
@@ -70,7 +70,7 @@ public class AgregarCiudad {
         String text = nombre.getText();
         if (!(text.isEmpty()) && !(cM.getValue().isEmpty()) ){
             try {
-            FileWriter writer = new FileWriter("src/main/java/com/mycompany/files/ciudades.csv", true);
+            FileWriter writer = new FileWriter(App.pathCiudad, true);
             BufferedWriter bufferedWriter = new BufferedWriter(writer);
             indice++;
             bufferedWriter.write(indice+","+nombre.getText()+","+cM.getValue()+"\n");

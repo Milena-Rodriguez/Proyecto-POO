@@ -8,8 +8,6 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.effect.Bloom?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -18,7 +16,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.proyectopoojar.CrearConcursoController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.proyectopoojar.CrearConcurso">
    <top>
       <Label text="Crear Concurso" BorderPane.alignment="CENTER">
          <font>
@@ -201,23 +199,10 @@
                   <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                </padding>
             </ComboBox>
-            <TableView prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="10">
-              <columns>
-                <TableColumn prefWidth="75.0" text="Lugar" />
-                <TableColumn prefWidth="75.0" text="Descripción" />
-                  <TableColumn prefWidth="75.0" text="Auspiciante" />
-              </columns>
-               <padding>
-                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
-               </padding>
-               <GridPane.margin>
-                  <Insets />
-               </GridPane.margin>
-            </TableView>
             <ChoiceBox prefWidth="150.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="9" />
             <Button mnemonicParsing="false" text="Añadir premio" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="11" GridPane.vgrow="ALWAYS" />
             <Button mnemonicParsing="false" text="Guardar" GridPane.rowIndex="12" />
-            <Button mnemonicParsing="false" text="Cancelar" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+            <Button fx:id="switchToAdministrarConcurso" mnemonicParsing="false" onAction="#switchToAdministrarConcurso" text="Cancelar" GridPane.columnIndex="1" GridPane.rowIndex="12" />
          </children>
          <BorderPane.margin>
             <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
