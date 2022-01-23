@@ -5,7 +5,13 @@
  */
 package com.mycompany.modelo;
 
+import com.mycompany.proyectopoojar.App;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 /**
  *
@@ -67,4 +73,41 @@ public class Mascota {
         return "Nombre: " + this.nombre + ", Perro o Gato: " + this.perroOGato + ", Raza: "
                 + this.raza + "Fecha de nacimiento: " + this.fechaNacimiento + ", Foto: " 
                 +this.foto + ", Duenio: " + this.duenio.toString();}
+    
+    public static ArrayList<Mascota> cargarMascotas(String ruta) {
+        ArrayList<Mascota> mascotas = new ArrayList<>();
+        
+       
+        try(InputStream input = Mascota.class.getClassLoader().getResourceAsStream(ruta);
+                BufferedReader br = new BufferedReader(new InputStreamReader(input))) {
+                String linea = null;
+                br.readLine();
+            
+            while ((linea = br.readLine()) != null) //iterar mientras haya lineas
+            {
+                String[] info = linea.split(";");//separar los datos por coma
+                DirigidoA tipo;
+                if(info[2].equals("perro")){
+                    tipo=DirigidoA.PERROS;
+                }else{
+                    tipo=DirigidoA.GATOS;
+            }
+                Duenio du;
+                for(Duenio d:Duenio.cargarDuenios(App.pathDuenio)){
+                    if(info[6].equals(d.getCedula())){
+                        du=d;
+                    }
+                }
+                //crear objeto y agregar a la lista
+                mascotas.add(new Mascota(info[1],tipo,info[3],LocalDate.parse(info[4]),info[5],du));
+                        
+            }
+        }  catch (IOException ex) {
+            System.out.println("Error al leer el archivo");
+        }  catch (Exception ex) {
+            System.out.println("Error " + ex.getMessage());
+        } 
+        
+       return mascotas;
+    }
 }
