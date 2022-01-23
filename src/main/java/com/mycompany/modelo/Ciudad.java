@@ -25,6 +25,9 @@ public class Ciudad {
         this.nombre=n;
         this.provincia=p;
     }
+    public Ciudad(String n){
+        this.nombre=n;
+    }
     //GETTERS
     public String getNombre(){return this.nombre;}
     public String getProvincia(){return this.provincia;}
@@ -53,7 +56,6 @@ public class Ciudad {
         try(InputStream input = Ciudad.class.getClassLoader().getResourceAsStream(ruta);
                 BufferedReader br = new BufferedReader(new InputStreamReader(input))) {
                 String linea = null;
-                br.readLine();
             
             while ((linea = br.readLine()) != null) //iterar mientras haya lineas
             {
@@ -63,11 +65,7 @@ public class Ciudad {
                         
             }
         }  catch (IOException ex) {
-            System.out.println("Error al leer el archivo");
-        }  catch (Exception ex) {
-            System.out.println("Error " + ex.getMessage());
-        } 
-        
+            ex.printStackTrace();}
        return ciudades;
     }
 }

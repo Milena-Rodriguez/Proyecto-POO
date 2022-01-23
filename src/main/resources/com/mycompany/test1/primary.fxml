@@ -30,7 +30,7 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button id="button" fx:id="switchToAdministrarMascota" alignment="TOP_CENTER" contentDisplay="CENTER" onAction="#switchToAdministrarMascota" prefHeight="38.0" prefWidth="150.0" text="Mascotas" textAlignment="RIGHT" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <Button id="button" fx:id="switchToAdministrarMascota" alignment="CENTER" contentDisplay="CENTER" onAction="#switchToAdministrarMascota" prefHeight="38.0" prefWidth="150.0" text="Mascotas" textAlignment="RIGHT" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -38,21 +38,21 @@
                         <Cursor fx:constant="NONE" />
                      </cursor>
                   </Button>
-                  <Button id="button" fx:id="switchTolistaDuenio" alignment="TOP_CENTER" contentDisplay="CENTER" onAction="#switchTolistaDuenio" prefHeight="38.0" prefWidth="150.0" text="Dueños de mascotas" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <Button id="button" fx:id="switchTolistaDuenio" alignment="CENTER" contentDisplay="CENTER" onAction="#switchTolistaDuenio" prefHeight="38.0" prefWidth="150.0" text="Dueños de mascotas" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <font>
                         <Font size="14.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="NONE" />
                      </cursor></Button>
-                  <Button id="button" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="38.0" prefWidth="150.0" text="Concursos" textAlignment="RIGHT" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <Button id="button" alignment="CENTER" contentDisplay="CENTER" onAction="#switchToAdministrarConcursos_1" prefHeight="38.0" prefWidth="150.0" text="Concursos" textAlignment="RIGHT" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <font>
                         <Font size="14.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="NONE" />
                      </cursor></Button>
-                  <Button id="button" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="38.0" prefWidth="150.0" text="Ciudad" textAlignment="RIGHT" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                  <Button id="button" alignment="CENTER" contentDisplay="CENTER" onAction="#switchToAdministrarCiudades" prefHeight="38.0" prefWidth="150.0" text="Ciudad" textAlignment="RIGHT" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -60,7 +60,7 @@
                         <Cursor fx:constant="NONE" />
                      </cursor>
                   </Button>
-                  <Button id="button" alignment="TOP_CENTER" contentDisplay="CENTER" onAction="#switchToListaAuspiciantes" prefHeight="38.0" prefWidth="150.0" text="Auspiciantes" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                  <Button id="button" alignment="CENTER" contentDisplay="CENTER" onAction="#switchToListaAuspiciantes" prefHeight="38.0" prefWidth="150.0" text="Auspiciantes" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -68,7 +68,7 @@
                         <Cursor fx:constant="NONE" />
                      </cursor>
                   </Button>
-                  <Button id="button" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="38.0" prefWidth="150.0" text="Inscribir mascota" textAlignment="RIGHT" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                  <Button id="button" alignment="CENTER" contentDisplay="CENTER" onAction="#switchToInscribirMascota" prefHeight="38.0" prefWidth="150.0" text="Inscribir mascota" textAlignment="RIGHT" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -78,12 +78,12 @@
                   </Button>
                </children>
             </GridPane>
-            <Label id="label" alignment="CENTER" contentDisplay="CENTER" layoutX="285.0" layoutY="43.0" prefHeight="38.0" prefWidth="134.0" stylesheets="@css/estilos.css" text="Elegir una opción:" AnchorPane.topAnchor="55.0">
+            <Label id="label" alignment="CENTER" contentDisplay="CENTER" layoutX="268.0" layoutY="72.0" prefHeight="38.0" prefWidth="144.0" stylesheets="@css/estilos.css" text="Elegir una opción:" AnchorPane.topAnchor="72.0">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label id="label" layoutX="199.0" layoutY="11.0" prefHeight="38.0" prefWidth="266.0" stylesheets="@css/estilos.css" text="Bienvenid@ a la sección de administración" AnchorPane.topAnchor="25.0">
+            <Label id="labell" layoutX="193.0" layoutY="27.0" prefHeight="38.0" prefWidth="294.0" stylesheets="@css/estilos.css" text="Bienvenid@ a la sección de administración" AnchorPane.topAnchor="27.0">
                <font>
                   <Font size="15.0" />
                </font>

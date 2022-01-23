@@ -12,16 +12,16 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="350.0" prefWidth="450.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.proyectopoojar.CrearAuspiante">
+<VBox alignment="CENTER" prefHeight="420.0" prefWidth="450.0" spacing="20.0" stylesheets="@css/estilos.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.proyectopoojar.CrearAuspiante">
     <children>
-        <Label text="Agregar Auspiciante">
+        <Label id="titulo" text="Agregar Auspiciante">
          <font>
             <Font size="18.0" />
          </font></Label>
-      <GridPane>
+      <GridPane prefHeight="226.0" prefWidth="378.0">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.20001220703125" minWidth="10.0" prefWidth="147.5999755859375" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="313.20001220703125" minWidth="10.0" prefWidth="312.4000244140625" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.20001220703125" minWidth="10.0" prefWidth="110.199951171875" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="313.20001220703125" minWidth="10.0" prefWidth="300.600048828125" />
         </columnConstraints>
         <rowConstraints>
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -38,12 +38,30 @@
             <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Cuidad:" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
             <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Email:" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
             <Accordion GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <ChoiceBox fx:id="cc" prefHeight="26.0" prefWidth="312.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <TextField fx:id="txtield1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="txtield2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField fx:id="txtield3" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <TextField fx:id="txtield4" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <TextField fx:id="txtield0" GridPane.columnIndex="1" />
+            <ChoiceBox fx:id="cc" prefHeight="37.0" prefWidth="303.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin></ChoiceBox>
+            <TextField fx:id="txtield1" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="txtield2" prefWidth="290.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="txtield3" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="txtield4" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="txtield0" prefHeight="26.0" prefWidth="288.0" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin></TextField>
             <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Página web:" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
          </children>
       </GridPane>
@@ -57,7 +75,7 @@
         </rowConstraints>
          <children>
             <Button fx:id="cancel" mnemonicParsing="false" onAction="#switchTolistaDuenio" prefHeight="50.0" prefWidth="75.0" text="Cancelar" GridPane.columnIndex="1" />
-            <Button fx:id="guardar" onAction="#switchTolistaDuenio" prefHeight="39.0" prefWidth="73.0" text="Guardar" />
+            <Button fx:id="guardar" onAction="#GuardarAuspiciante" prefHeight="39.0" prefWidth="73.0" text="Guardar" />
          </children>
       </GridPane>
     </children>

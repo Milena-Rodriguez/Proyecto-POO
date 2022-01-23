@@ -18,7 +18,11 @@ public class App extends Application {
     public static String pathDuenio="com/mycompany/files/duenosP5.csv";
     public static String pathAus="/ficheros/Auspiciantes.dat";
     public static String pathMascotas="com/mycompany/files/mascotas.csv";
+<<<<<<< HEAD
     public static String pathPremios="com/mycompany/files/premios.csv";
+=======
+    public static String pathConcursos="cuando crees el path pon lo aqui por fa";
+>>>>>>> 4da673481e5a5a693ecce4691cbbd879c4998c1e
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -38,6 +42,10 @@ public class App extends Application {
 
     public static void main(String[] args) {
         launch();
+    }
+    //metodo para cambiar el contenido de la escena
+    static void changeRoot(Parent rootNode) {
+        scene.setRoot(rootNode);
     }
 
 }

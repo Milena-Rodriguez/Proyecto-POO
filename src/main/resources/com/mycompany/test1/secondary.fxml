@@ -14,7 +14,7 @@
 
 <VBox alignment="CENTER" prefHeight="350.0" prefWidth="450.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.proyectopoojar.SecondaryController">
     <children>
-        <Label id="titilo" stylesheets="@css/estilos.css" text="Agregar Dueño">
+        <Label id="titulo" prefHeight="53.0" prefWidth="213.0" stylesheets="@css/estilos.css" text="Agregar Dueño">
          <font>
             <Font size="18.0" />
          </font></Label>
@@ -40,13 +40,13 @@
             <Label id="label" alignment="TOP_CENTER" contentDisplay="CENTER" stylesheets="@css/estilos.css" text="Cuidad:" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
             <Label id="label" alignment="TOP_CENTER" contentDisplay="CENTER" stylesheets="@css/estilos.css" text="Email:" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
             <Accordion stylesheets="@css/estilos.css" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <TextField fx:id="txtield1" stylesheets="@css/estilos.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="txtield2" stylesheets="@css/estilos.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField fx:id="txtield3" stylesheets="@css/estilos.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <TextField fx:id="txtield4" stylesheets="@css/estilos.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <TextField fx:id="txtield5" stylesheets="@css/estilos.css" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="txtfield1" stylesheets="@css/estilos.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtfield2" stylesheets="@css/estilos.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtfield3" stylesheets="@css/estilos.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txtfield4" stylesheets="@css/estilos.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="txtfield5" stylesheets="@css/estilos.css" GridPane.columnIndex="1" GridPane.rowIndex="6" />
             <Label id="label" alignment="TOP_CENTER" contentDisplay="CENTER" stylesheets="@css/estilos.css" text="Cédula:" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-            <TextField fx:id="txtield0" stylesheets="@css/estilos.css" GridPane.columnIndex="1" />
+            <TextField fx:id="txtfield0" stylesheets="@css/estilos.css" GridPane.columnIndex="1" />
             <ComboBox fx:id="cc" onAction="#llenarComboBox" prefHeight="26.0" prefWidth="287.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
          </children>
       </GridPane>
