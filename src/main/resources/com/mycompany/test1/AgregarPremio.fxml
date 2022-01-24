@@ -8,22 +8,22 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.proyectopoojar.AgregarPremioController">
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox prefHeight="404.0" prefWidth="601.0">
          <children>
             <HBox prefHeight="43.0" prefWidth="601.0">
                <children>
-                  <Label scaleX="2.0" scaleY="2.0" text="Agregar premio" translateX="240.0" translateY="20.0" />
+                  <Label scaleX="2.0" scaleY="2.0" text="Agregar premio" translateX="200.0" translateY="20.0" />
                </children>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <HBox prefHeight="68.0" prefWidth="601.0">
                <children>
                   <Label text="Lugar:" translateX="20.0" translateY="20.0" />
                   <TextField translateX="140.0" translateY="20.0" />
                </children>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <HBox prefHeight="76.0" prefWidth="601.0">
                <children>
                   <Label text="Descripción:" translateX="20.0" translateY="20.0" />
                   <TextField translateX="110.0" translateY="20.0" />

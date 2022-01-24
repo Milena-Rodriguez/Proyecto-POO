@@ -57,7 +57,49 @@ public class Concurso {
     public String getPremios(){return this.premios;}
     public ArrayList<Auspiciante> getAuspiciantes(){return this.getAuspiciantes();}
     public DirigidoA getDirigidoA(){return this.dirigidoA;}
+    
+    //SETTERS
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setFechaDelEvento(LocalDate fechaDelEvento) {
+        this.fechaDelEvento = fechaDelEvento;
+    }
+
+    public void setHoraDelEvento(String horaDelEvento) {
+        this.horaDelEvento = horaDelEvento;
+    }
+
+    public void setFechaInicioDeInscripcion(LocalDate fechaInicioDeInscripcion) {
+        this.fechaInicioDeInscripcion = fechaInicioDeInscripcion;
+    }
+
+    public void setFechaCierreDeInscripcion(LocalDate fechaCierreDeInscripcion) {
+        this.fechaCierreDeInscripcion = fechaCierreDeInscripcion;
+    }
+
+    public void setCiudad(Ciudad ciudad) {
+        this.ciudad = ciudad;
+    }
+
+    public void setLugar(String lugar) {
+        this.lugar = lugar;
+    }
+
+    public void setPremios(String premios) {
+        this.premios = premios;
+    }
+
+    public void setAusDelConcurso(ArrayList<Auspiciante> AusDelConcurso) {
+        this.AusDelConcurso = AusDelConcurso;
+    }
+
+    public void setDirigidoA(DirigidoA dirigidoA) {
+        this.dirigidoA = dirigidoA;
+    }
+    
     
     //Métodos    
     

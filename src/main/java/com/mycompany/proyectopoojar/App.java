@@ -18,6 +18,7 @@ public class App extends Application {
     public static String pathDuenio="com/mycompany/files/duenosP5.csv";
     public static String pathAus="/ficheros/Auspiciantes.dat";
     public static String pathMascotas="com/mycompany/files/mascotas.csv";
+    public static String pathPremios="com/mycompany/files/premios.csv";
     public static String pathConcursos="cuando crees el path pon lo aqui por fa";
 
     @Override

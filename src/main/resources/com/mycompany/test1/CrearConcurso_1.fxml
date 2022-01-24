@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.TextField?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Bloom?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -16,9 +15,9 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.proyectopoojar.CrearConcurso">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.proyectopoojar.CrearConcurso.java">
    <top>
-      <Label text="Crear Concurso" BorderPane.alignment="CENTER">
+      <Label stylesheets="@css/estilos.css" text="Crear Concurso" BorderPane.alignment="CENTER">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -43,28 +42,28 @@
       <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
    </padding>
    <right>
-      <GridPane prefHeight="524.0" prefWidth="523.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
+      <GridPane prefHeight="524.0" prefWidth="523.0" style="-fx-border-color: black;" stylesheets="@css/estilos.css" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.0" minWidth="10.0" prefWidth="229.20001220703125" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.79998779296875" minWidth="10.0" prefWidth="230.79998779296875" />
         </columnConstraints>
         <rowConstraints>
             <RowConstraints maxHeight="38.8" minHeight="0.0" prefHeight="1.7999935388565056" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="38.8" minHeight="0.0" prefHeight="33.19998779296875" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="45.600010681152334" minHeight="10.0" prefHeight="32.800009155273436" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="39.999990844726554" minHeight="2.2000183105468665" prefHeight="39.999990844726554" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="35.20002441406248" minHeight="0.8000015258788977" prefHeight="27.20002441406251" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="47.99999389648437" minHeight="1.000013732910162" prefHeight="43.199975585937494" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="44.800012207031244" minHeight="0.0" prefHeight="37.599999999999994" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="39.99998779296874" minHeight="0.0" prefHeight="36.00000610351563" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="39.99998779296877" minHeight="0.0" prefHeight="32.0000061035156" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="85.5999755859375" minHeight="0.0" prefHeight="50.399993896484375" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="204.00000000000003" minHeight="0.0" prefHeight="129.19996948242186" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="41.0" minHeight="0.0" prefHeight="41.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="45.600010681152334" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="45.0" minHeight="2.2000183105468665" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="36.0" minHeight="0.8000015258788977" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="51.0" minHeight="1.000013732910162" prefHeight="42.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="44.800012207031244" minHeight="0.0" prefHeight="36.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="41.0" minHeight="0.0" prefHeight="34.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="0.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="85.5999755859375" minHeight="0.0" prefHeight="57.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="204.00000000000003" minHeight="0.0" prefHeight="113.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="128.8" minHeight="10.0" prefHeight="34.599987792968705" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="128.8" minHeight="10.0" prefHeight="35.20001220703125" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label text="Dirigido a: " GridPane.rowIndex="1">
+            <Label stylesheets="@css/estilos.css" text="Dirigido a: " GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets left="100.0" />
                </GridPane.margin>
@@ -72,7 +71,7 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <Label contentDisplay="BOTTOM" text="Nombre:" GridPane.rowIndex="2">
+            <Label contentDisplay="BOTTOM" stylesheets="@css/estilos.css" text="Nombre:" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets left="100.0" />
                </GridPane.margin>
@@ -104,7 +103,7 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <Label text="Cierre inscripción:" GridPane.rowIndex="6">
+            <Label text="Cierre inscripción:" translateX="100.0" GridPane.rowIndex="6">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
@@ -112,7 +111,7 @@
                   <Insets left="100.0" />
                </padding>
             </Label>
-            <Label text="Auspiciantes:" GridPane.rowIndex="9">
+            <Label stylesheets="@css/estilos.css" text="Auspiciantes:" GridPane.rowIndex="9">
                <GridPane.margin>
                   <Insets left="100.0" />
                </GridPane.margin>
@@ -144,7 +143,7 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <ComboBox prefHeight="10.0" prefWidth="150.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <ComboBox fx:id="ComboDirigidoA" onAction="#ComboDirigidoA" prefHeight="10.0" prefWidth="150.0" style="-fx-border-color: black;" stylesheets="@css/estilos.css" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <padding>
                   <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                </padding>
@@ -152,46 +151,10 @@
                   <Insets right="100.0" />
                </GridPane.margin>
             </ComboBox>
-            <TextField style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-               <padding>
-                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
-               </padding>
-               <GridPane.margin>
-                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
-               </GridPane.margin>
-               <opaqueInsets>
-                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
-               </opaqueInsets>
-               <cursor>
-                  <Cursor fx:constant="NONE" />
-               </cursor>
-            </TextField>
-            <TextField style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="8">
-               <padding>
-                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
-               </padding>
-               <opaqueInsets>
-                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
-               </opaqueInsets>
-               <cursor>
-                  <Cursor fx:constant="NONE" />
-               </cursor>
-            </TextField>
-            <DatePicker style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <TextField style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="4">
-               <padding>
-                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
-               </padding>
-               <opaqueInsets>
-                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
-               </opaqueInsets>
-               <cursor>
-                  <Cursor fx:constant="NONE" />
-               </cursor>
-            </TextField>
-            <DatePicker style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <DatePicker style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <ComboBox prefWidth="150.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="7">
+            <DatePicker fx:id="fechaActual" onAction="#fechaActual" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <DatePicker fx:id="fechaInicio" onAction="#fechaInicio" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <DatePicker fx:id="fechaFin" onAction="#fechaFin" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <ComboBox fx:id="comboCiudad" onAction="#comboCiudad" prefWidth="150.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="7">
                <GridPane.margin>
                   <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                </GridPane.margin>
@@ -199,10 +162,13 @@
                   <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                </padding>
             </ComboBox>
-            <ChoiceBox prefWidth="150.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <ChoiceBox fx:id="comboAuspi" onDragDetected="#comboAuspi" prefHeight="19.0" prefWidth="150.0" style="-fx-border-color: black;" stylesheets="@css/estilos.css" GridPane.columnIndex="1" GridPane.rowIndex="9" />
             <Button mnemonicParsing="false" text="Añadir premio" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="11" GridPane.vgrow="ALWAYS" />
             <Button mnemonicParsing="false" text="Guardar" GridPane.rowIndex="12" />
             <Button fx:id="switchToAdministrarConcurso" mnemonicParsing="false" onAction="#switchToAdministrarConcurso" text="Cancelar" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+            <TextField fx:id="nombre" onAction="#nombre" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="hora" onAction="#hora" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="lugar" onAction="#lugar" GridPane.columnIndex="1" GridPane.rowIndex="8" />
          </children>
          <BorderPane.margin>
             <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />

@@ -110,7 +110,7 @@ public class CrearMascota {
         Stage stage = (Stage) nombre.getScene().getWindow();
         stage.close();
     }
-   public void Guardar(){
+   public void guardar(){
        if(nombre.getText().isEmpty() && raza.getText().isEmpty() && !(fecha.isPressed()) && !(group.getSelectedToggle()==perro || group.getSelectedToggle()==gato)){
            Alert a2=new Alert(Alert.AlertType.WARNING,"No dejar campos vacíos.");
            a2.show();

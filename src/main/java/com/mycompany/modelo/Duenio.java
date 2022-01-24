@@ -5,17 +5,12 @@
  */
 package com.mycompany.modelo;
 
-import com.mycompany.proyectopoojar.App;
 import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.ObjectInputStream;
 import java.util.ArrayList;
-import java.util.Objects;
-import javafx.scene.control.Alert;
+import java.util.Objects; 
 
 /**
  *
@@ -67,7 +62,7 @@ public class Duenio extends Persona{
     
     @Override
     public String toString(){
-        return "Cedula del duenio: " + this.cedula + ", Apellido del duenio: " +this.apellido 
+        return this.cedula + ", " +this.apellido 
                 + ", "+super.toString();}//se sobreescribe el metodo toString de la clase padre//se sobreescribe el metodo toString de la clase padre
     
     public int compareTo(Duenio o) {
