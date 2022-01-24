@@ -5,12 +5,17 @@
  */
 package com.mycompany.proyectopoojar;
 
+import com.mycompany.modelo.*;
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
+import java.io.ObjectOutputStream;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 
 import javafx.scene.control.Button;
@@ -25,9 +30,9 @@ public class InscribirMascota {
 
 
     @FXML
-    private ComboBox<String> ConcursoDis;
+    private ComboBox<Concurso> ConcursoDis;
     @FXML
-    private ComboBox<String> MascotaDis;
+    private ComboBox<Mascota> MascotaDis;
     @FXML
     private Button Inscribir;
     @FXML
@@ -42,11 +47,12 @@ public class InscribirMascota {
     private Label txt2;
     @FXML
     private Button cancel;
+    
+    LocalDate fecha_hoy = LocalDate.now();
     /**
      * Initializes the controller class.
      */
     public void initialize() {
-          System.out.println("sisis");
         //ConcursoDis.getItems().setAll());
     }    
     
@@ -62,15 +68,36 @@ public class InscribirMascota {
 
     @FXML
     private void FiltrarConcurso(ActionEvent event) {
-        
+        ArrayList<Concurso> concursos = new ArrayList<>();
+        for (Concurso c : Concurso.cargarConcursos(App.pathConcursos)){
+            if(c.getFechaCierreDeInscripcion().isAfter(fecha_hoy)&&c.getFechaInicioDeInscripcion().isBefore(fecha_hoy)){
+                System.out.println(c);
+                concursos.add(c);
+                }
+        }
+        ConcursoDis.getItems().setAll(concursos);
     }
 
     @FXML
     private void FiltrarMascota(ActionEvent event) {
+        ArrayList<Mascota> mascotas = Mascota.cargarMascotas(App.pathMascotas);
+        MascotaDis.getItems().setAll(mascotas);
     }
 
     @FXML
     private void InscribirMas(ActionEvent event) {
-    }
-
-}
+            Concurso con = ConcursoDis.getValue();
+            Mascota mas = MascotaDis.getValue();
+            if (!(con.equals(null)) &&!(mas.equals(null)) ){
+            try {
+              FileWriter writer = new FileWriter(App.pathDuenio, true);
+            BufferedWriter bufferedWriter = new BufferedWriter(writer);
+            bufferedWriter.write(con.toString()+ ","+ mas.toString());
+            bufferedWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();            
+        }
+        }else{
+            Alert a2=new Alert(Alert.AlertType.WARNING,"No dejar campos vacíos.");
+           a2.show();
+    }}}

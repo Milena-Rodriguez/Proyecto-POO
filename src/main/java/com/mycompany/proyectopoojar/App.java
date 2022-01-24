@@ -16,10 +16,11 @@ public class App extends Application {
     private static Scene scene;
     public static String pathCiudad = "com/mycompany/files/ciudades.csv";
     public static String pathDuenio="com/mycompany/files/duenosP5.csv";
-    public static String pathAus="/ficheros/Auspiciantes.ser";
+    public static String pathAus="archivos/Auspiciantes.ser";
     public static String pathMascotas="com/mycompany/files/mascotas.csv";
     public static String pathPremios="com/mycompany/files/premios.csv";
-    public static String pathConcursos="com/mycompany/files/concursos.csv";
+    public static String pathConcursos="archivos/concursos.ser";
+    public static String pathMacotasIns="com/mycompany/files/mascotasIns.csv";
 
     @Override
     public void start(Stage stage) throws IOException {

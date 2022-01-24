@@ -73,7 +73,6 @@ public class SecondaryController {
        } 
     
     private void GuardarDuenio(){
-        if(guardar.isPressed()){
             //se guardan los datos ingresados en la ventana
             String txt0 = txtfield0.getText();
             String txt1 = txtfield1.getText();
@@ -97,7 +96,7 @@ public class SecondaryController {
         }else{
             Alert a2=new Alert(Alert.AlertType.WARNING,"No dejar campos vacíos.");
            a2.show();}
-        }
+        
     }
     
 }
