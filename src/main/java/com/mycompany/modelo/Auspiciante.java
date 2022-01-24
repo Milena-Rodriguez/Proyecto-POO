@@ -5,6 +5,14 @@
  */
 package com.mycompany.modelo;
 
+import com.mycompany.proyectopoojar.App;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.ObjectInputStream;
 import java.util.ArrayList;
 
 /**
@@ -54,6 +62,18 @@ public class Auspiciante extends Persona{
     
     public static ArrayList<Auspiciante> cargarAuspiciante(String ruta){
         ArrayList<Auspiciante> auspiciantes = new ArrayList<>();
+        
+        ObjectInputStream in;
+        try {//se deserealiza el archivo de auspiciantes
+            in = new ObjectInputStream(new FileInputStream(ruta));
+           auspiciantes = (ArrayList<Auspiciante>) in.readObject();//hay que hacer casting
+        } catch (FileNotFoundException ex) {
+            System.out.println(ex.getMessage());
+        } catch (IOException ex) {
+            System.out.println("IOException:" + ex.getMessage());
+        } catch (ClassNotFoundException ex) {
+            System.out.println("ClassNotFoundException:" + ex.getMessage());
+        }
         
         return auspiciantes;
     }

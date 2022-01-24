@@ -15,6 +15,7 @@ import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 import java.util.ArrayList;
 import java.util.Objects;
+import javafx.scene.control.Alert;
 
 /**
  *
@@ -95,21 +96,18 @@ public class Duenio extends Persona{
         ArrayList<Duenio> duenios = new ArrayList<>();
         try(InputStream input = Duenio.class.getClassLoader().getResourceAsStream(ruta);
             BufferedReader br = new BufferedReader(new InputStreamReader(input))) {
-            String linea = null;
+            String linea;
             br.readLine();//se lee la primera liena de encabezado
             while ((linea = br.readLine()) != null) //iterar mientras haya lineas
             {   String[] info = linea.split(",");//separar los datos por coma
                 String c =  info[5];
-                ArrayList<Ciudad> ciudades = Ciudad.cargarCuiudades(App.pathCiudad);
-                for (Ciudad cc : ciudades){
-                    if(cc.getNombre().equals(c)){Ciudad ciu = cc;
-                                                //crear objeto y agregar a la lista
-                                                 duenios.add(new Duenio(info[0],info[1],info[2],info[3],info[4],ciu,info[6]));
-                    }
-                }}
-        }  catch (IOException ex) {
+                Ciudad ciu = new Ciudad (c);
+                //crear objeto y agregar a la lista
+                duenios.add(new Duenio(info[0],info[1],info[2],info[3],info[4],ciu,info[6]));
+       }}  catch (IOException ex) {
             System.out.println("Error al leer el archivo");
         }  catch (Exception ex) {
-            System.out.println("Error " + ex.getMessage()); } 
+            System.out.println("Error " + ex.getMessage());
+        } 
        return duenios;
     }}

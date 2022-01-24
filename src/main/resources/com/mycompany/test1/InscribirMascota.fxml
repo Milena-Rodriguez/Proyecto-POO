@@ -16,7 +16,7 @@
 <AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="578.0" stylesheets="@css/estilos.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.proyectopoojar.InscribirMascota">
    <children>
       <HBox layoutX="222.0" layoutY="267.0" prefHeight="100.0" prefWidth="200.0" />
-      <BorderPane layoutX="41.0" layoutY="80.0" prefHeight="345.0" prefWidth="521.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+      <BorderPane layoutX="41.0" layoutY="80.0" prefHeight="346.0" prefWidth="520.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="18.0">
          <bottom>
             <GridPane prefHeight="47.0" prefWidth="498.0" BorderPane.alignment="CENTER">
               <columnConstraints>
@@ -28,19 +28,19 @@
               </rowConstraints>
                <children>
                   <Button fx:id="Inscribir" alignment="CENTER" mnemonicParsing="false" onAction="#InscribirMas" prefHeight="30.0" prefWidth="115.0" text="Inscribir mascota" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                  <Button fx:id="Menu" alignment="CENTER" mnemonicParsing="false" onAction="#switchToPrimary" prefHeight="30.0" prefWidth="120.0" text="Regresar al menú" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Button fx:id="cancel" alignment="CENTER" mnemonicParsing="false" onAction="#switchToPrimary" prefHeight="30.0" prefWidth="87.0" text="Cancelar" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                </children>
             </GridPane>
          </bottom>
          <left>
             <VBox maxHeight="-Infinity" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label text="Escoger concurso disponible:">
+                  <Label fx:id="textEscogerCon" text="Escoger concurso disponible:">
                      <VBox.margin>
                         <Insets bottom="30.0" top="30.0" />
                      </VBox.margin>
                   </Label>
-                  <Label text="Escoger mascota:">
+                  <Label fx:id="txtEscMas" text="Escoger mascota:">
                      <VBox.margin>
                         <Insets top="30.0" />
                      </VBox.margin>
@@ -64,8 +64,37 @@
                </children>
             </VBox>
          </center>
+         <right>
+            <VBox maxHeight="-Infinity" prefHeight="150.0" prefWidth="134.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="txt1" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" prefWidth="110.0">
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="10.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="txt2" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" prefHeight="68.0" prefWidth="110.0">
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="10.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </right>
+         <top>
+            <Label fx:id="txt0" text="Para inscribir una mascota tiene que seleccionar tanto el concurso como mascota." BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets top="15.0" />
+               </BorderPane.margin>
+            </Label>
+         </top>
       </BorderPane>
-      <Label id="titulo" alignment="CENTER" contentDisplay="CENTER" layoutX="176.0" layoutY="-3.0" prefHeight="53.0" prefWidth="250.0" text="Inscribir Mascota" AnchorPane.leftAnchor="164.0" AnchorPane.rightAnchor="164.0" AnchorPane.topAnchor="25.0">
+      <Label id="titulo" alignment="CENTER" contentDisplay="CENTER" layoutX="169.0" layoutY="25.0" prefHeight="54.0" prefWidth="241.0" text="Inscribir Mascota" AnchorPane.leftAnchor="169.0" AnchorPane.rightAnchor="168.0" AnchorPane.topAnchor="25.0">
          <font>
             <Font size="21.0" />
          </font>
