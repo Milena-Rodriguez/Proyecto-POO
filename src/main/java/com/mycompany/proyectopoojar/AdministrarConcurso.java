@@ -1,17 +1,14 @@
 package com.mycompany.proyectopoojar;
 
 import com.mycompany.modelo.Concurso;
-import com.mycompany.proyectopoojar.App;
 import com.mycompany.utils.Correo;
 import java.io.IOException;
-import java.util.ArrayList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.input.MouseEvent;
 
 public class AdministrarConcurso {
 
@@ -50,7 +47,7 @@ public class AdministrarConcurso {
         txtEstado.setText("Enviando correo...");
         String destinatario = "ariana.san00000000@gmail.com";//correo final, cambiar despues-- pooespol@gmail.com
         String asunto = "Prueba de correo 23 de enero";
-        String cuerpo = "Cuerpo de email.  Saludos.";
+        String cuerpo = "Este correo notifica al concurso" + colNom.getCellFactory();
         Correo.enviarCorreo(destinatario, asunto, cuerpo);
         System.out.println("Correo enviado!");
         txtEstado.setText("Correo enviado!");
