@@ -4,6 +4,10 @@
  * and open the template in the editor.
  */
 package com.mycompany.modelo;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -167,10 +171,23 @@ public class Concurso {
         for (Auspiciante a : this.AusDelConcurso){
             aus += " -"+a.getNombre();}
             
-        return "Nombre del concurso: " + this.nombre + "\nFecha del evento: " + this.fechaDelEvento + "\nHora del evento: " 
-                +this.horaDelEvento + "\nFecha de Inicio de Inscripcion: " + this.fechaInicioDeInscripcion + "\nFecha de cierre de inscripcion: "
-                +this.fechaCierreDeInscripcion + "\nCiudad: " + this.ciudad.toString() + "\nLugar: " + this.lugar + "\nPremios: "
-                +this.premios + "\n Auspiciante del evento: " + aus + "\nDirigido a: " + this.dirigidoA;}
+        return this.nombre+ ","  + this.fechaDelEvento+ ","  +this.horaDelEvento + "," + this.fechaInicioDeInscripcion + "," 
+                +this.fechaCierreDeInscripcion + ","  + this.ciudad.toString() + ","  + this.lugar + "," 
+                +this.premios + ","  + aus + ","  + this.dirigidoA;}
     
-      
+      public static ArrayList<Concurso> cargarConcursos(String ruta){
+          ArrayList<Concurso> concursos = new ArrayList<>();
+        System.out.println("xxxxxxxxxxxxx");
+       //leer la lista de personas del archivo serializado
+        try (ObjectInputStream oi = new ObjectInputStream(new FileInputStream(ruta))) {
+            concursos = (ArrayList<Concurso>) oi.readObject();
+            System.out.println("=============");
+        } catch (FileNotFoundException ex) {
+            System.out.println("archivo de concurso no existe");
+        } catch (IOException   ex) {
+            System.out.println("error io:"+ex.getMessage());
+        } catch (ClassNotFoundException  ex) {
+            System.out.println("error class:"+ex.getMessage());
+        } 
+        return concursos;}
 }
