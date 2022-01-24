@@ -116,6 +116,16 @@ public class CrearConcurso{
             concurso.setAusDelConcurso(aus);
             concurso.setDirigidoA(dA.getValue());
             concursoL.add(concurso);
+            
+    ObjectInputStream in;
+    try {
+            in= new ObjectInputStream(new FileInputStream(App.pathConcursos));
+            ArrayList<Concurso> concursos=(ArrayList<Concurso>)in.readObject();
+            
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
         }
     }
 }
